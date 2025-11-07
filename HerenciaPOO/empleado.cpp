@@ -1,13 +1,12 @@
 #include "empleado.h"
+#include <iomanip>
 
 Empleado::Empleado() {}
 
 Empleado::Empleado(string nombre, string apellido, int documento, float salario)
+    :nombre(nombre),apellido(apellido),documento(documento),salario(salario)
 {
-    this->nombre=nombre;
-    this->apellido=apellido;
-    this->documento =documento;
-    this->salario=salario;
+
 }
 
 float Empleado::CalcularSalario()
@@ -17,6 +16,9 @@ float Empleado::CalcularSalario()
 
 string Empleado::MostrarInformacion()
 {
-    return "Nombre completo: "+nombre+" "+apellido+"\nDocumento: "
-           +documento+"\nSalario: "+salario;
+    string info="Nombre completo: ";
+    info+= nombre;
+    info+=" "+apellido+" \nDocumento: "+ to_string(documento);
+    info+="\nSalario: "+to_string((salario));
+    return info;
 }

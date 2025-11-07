@@ -5,7 +5,9 @@
 class EmpleadoFijo : public Empleado
 {
 public:
-    EmpleadoFijo();
+
+    EmpleadoFijo(string nombre, string apellido, int documento, float salario);
+
 };
 
 #endif // EMPLEADOFIJO_H
