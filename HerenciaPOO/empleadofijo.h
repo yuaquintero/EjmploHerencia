@@ -7,7 +7,7 @@ class EmpleadoFijo : public Empleado
 public:
 
     EmpleadoFijo(string nombre, string apellido, int documento, float salario);
-
+    string MostrarInformacion() override;
 };
 
 #endif // EMPLEADOFIJO_H

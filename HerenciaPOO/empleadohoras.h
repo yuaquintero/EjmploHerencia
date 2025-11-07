@@ -12,7 +12,10 @@ class EmpleadoHoras : public Empleado
 
 public:
     EmpleadoHoras();
+    EmpleadoHoras(string nombre, string apellido, int documento,
+                  float numHoras,float valorHora );
     float CalcularSalario() override;
+    string MostrarInformacion() override;
 };
 
 #endif // EMPLEADOHORAS_H

@@ -6,3 +6,12 @@ EmpleadoFijo::EmpleadoFijo(string nombre, string apellido,
 {
 
 }
+
+string EmpleadoFijo::MostrarInformacion()
+{
+    string info= Empleado::MostrarInformacion();
+
+    info+="\nTipo empleado: Fijo";
+
+    return info;
+}
